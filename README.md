@@ -19,12 +19,6 @@ This implementation has not been thoroughly tested: use at your own risk.
 
 ## Installation
 
-### From PyPI (when available)
-
-```bash
-pip install eventstudypy
-```
-
 ### From Source
 
 ```bash
