@@ -1,10 +1,10 @@
 # EventStudyPy
 
-A Python implementation of event study estimation, providing a Python port of the R eventstudyr package.
-
 ## Overview
 
-EventStudyPy is a Python package for conducting event study analyses, commonly used in economics and finance to study the effects of events or interventions on outcomes over time. This package is a faithful port of the R eventstudyr package, implementing the methods recommended in [Freyaldenhoven et al. (2021)](https://www.nber.org/papers/w29170).
+This package is a Python port of the R [eventstudyr](https://github.com/JMSLab/eventstudyr) package package, implementing the methods recommended in [Freyaldenhoven et al. (2021)](https://www.nber.org/papers/w29170), with an additional feature to enable absorbing high-dimensional controls as fixed effects. The proxy/IV functionality (FHS estimator) is not included in this version. 
+
+This implementation has not been thoroughly tested: use at your own risk.
 
 ## Features
 
@@ -182,46 +182,6 @@ pytest tests/test_r_parity.py
 # Run with coverage
 pytest tests/ --cov=eventstudypy
 ```
-
-## Validation
-
-This implementation has been thoroughly tested against the R package:
-- ✅ All coefficients match exactly between Python and R
-- ✅ Both implementations recover true parameters within sampling error
-- ✅ Static and dynamic models work correctly
-- ✅ Handles heterogeneous effects, staggered treatment, anticipation effects, and long-run dynamics
-
-## Differences from R Package
-
-This Python implementation closely follows the R eventstudyr package with a few differences:
-
-1. **API**: Function names use Python conventions (snake_case instead of camelCase)
-2. **Data Structure**: Uses pandas DataFrames instead of R data.frames
-3. **Plotting**: Uses matplotlib/seaborn instead of ggplot2
-4. **FHS Estimator**: The proxy/IV functionality (FHS estimator) is not included in this version
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Citation
-
-If you use this package in your research, please cite:
-
-```bibtex
-@software{eventstudypy,
-  title = {EventStudyPy: Event Study Analysis in Python},
-  author = {EventStudyPy Contributors},
-  year = {2024},
-  url = {https://github.com/eventstudypy/eventstudypy}
-}
-```
-
-## Acknowledgments
 
 This package is a Python port of the R eventstudyr package. We thank the original authors for their work.
 
